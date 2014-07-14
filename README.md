@@ -12,13 +12,13 @@ En el archivo `bootstrap/start.php` al rededor de la linea 29 agregar el hostnam
 ```php
 $env = $app->detectEnvironment(array(
 
-	'local' => array('antares', 'mi-PC'),  // Hay 2 equipos registrados: antares y mi-PC
+	'local' => array('antares', 'mi-PC'), // Hay 2 equipos registrados: antares y mi-PC
 
 ));
 ```
 
 
-Dentro del proyecto (en la raiz) crear el archivo de configuraciones a la BD, el archivo de debe llamar `.env.local.php`:
+Dentro del proyecto (en la raiz) crear el archivo de configuraciones a la BD, el archivo se debe llamar `.env.local.php`:
 
 ```php
 <?php
@@ -38,5 +38,11 @@ Ahora utilizando composer instalar el proyecto:
 composer install
 ```
 
+
+Ejecutar las migraciones para tener la misma estructura en las tablas de la BD:
+
+```sh
+php artisan migrate
+```
 
 Listo!
