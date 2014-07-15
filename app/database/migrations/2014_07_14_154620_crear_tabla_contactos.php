@@ -12,12 +12,12 @@ class CrearTablaContactos extends Migration {
 	 */
 	public function up()
 	{
-        Schema::create('contactos', function(Blueprint $tabla) {
-            $tabla->increments('id');
-            $tabla->string('nombre', 45);
-            $tabla->string('telefono', 10);
-            $tabla->timestamps();
-        });
+                Schema::create('contactos', function(Blueprint $tabla) {
+                    $tabla->increments('id');
+                    $tabla->string('nombre', 45);
+                    $tabla->string('telefono', 10);
+                    $tabla->timestamps();
+                });
 	}
 
 	/**
@@ -27,7 +27,7 @@ class CrearTablaContactos extends Migration {
 	 */
 	public function down()
 	{
-        Schema::drop('contactos');
+                Schema::drop('contactos');
 	}
 
 }
